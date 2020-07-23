@@ -1,5 +1,8 @@
-
 #!/usr/bin/env python
+
+# Unencrypted, so will add SSH version soon.
+# Cisco WS-C3750V2-48TS
+# SW Version 15.0(2)SE11
 
 import getpass
 import sys
@@ -26,4 +29,3 @@ tn.write("show version | include uptime\n")
 tn.write("exit\n")
 
 print tn.read_all()
-
