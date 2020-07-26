@@ -20,12 +20,14 @@ if password:
     tn.read_until("Password: ")
     tn.write(password + "\n")
 
-tn.write("enable\n")
-tn.write("TempPass\n")
+# "username john privilege 15" added to switches,
+# so enable password not required.
+
+# tn.write("enable\n")
+# tn.write("TempPass\n")
 
 tn.write("show version | include uptime\n")
 
-# tn.write("ls\n")
 tn.write("exit\n")
 
 print tn.read_all()
